@@ -1,0 +1,7 @@
+.productCard, img {
+    width: 200px;
+    height: 250px;
+}
+nav, li, div{
+    display: inline-block;
+}
