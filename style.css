@@ -1,11 +1,15 @@
-body{
-    background-color: #35608c;
-}
 h1 {
     display:flex;
     justify-content: center;
     align-items: center;
     margin: 0;
+    background-color: #35608c;
+}
+nav{
+    background-color: #637a92;
+    height: 40px;
+    width: auto;
+    margin-bottom: 40px;
 }
 #headerImg{
     height: 300px;
