@@ -18,6 +18,7 @@
                     <img class="productImg" src=${product.image}>
                     <p>${product.title}</p>
                     <p>${product.price} $</p>
+                    <button>Buy me</button>
                 </div>`;
                 document.getElementById("productCard").innerHTML += productElem;
             }
