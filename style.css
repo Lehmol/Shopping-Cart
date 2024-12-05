@@ -1,7 +1,26 @@
-.productCard, img {
+body{
+    background-color: #35608c;
+}
+h1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+#headerImg{
+    height: 300px;
+}
+.productCard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+}
+.productImg {
     width: 200px;
     height: 250px;
 }
-nav, li, div{
-    display: inline-block;
+nav {
+    display: flex;
+    justify-content: space-evenly;
 }
