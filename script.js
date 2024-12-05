@@ -1,10 +1,15 @@
-/*fetch("https://fakestoreapi.com/products/")
-    .then(response => response.json())
-    .then((data) => {
-        
-        for(let i = 0; i < data.length; i++) {
-            const category = data.id[i].category;
-            document.getElementById("categoryContainer").textContent = 
+// Using IIFE (Immediatley invoked function expression)
+const currentProductIndex = 0;
 
-        }
-    })*/
+(async function () {
+    const resp = await fetch("https://fakestoreapi.com/products");
+    const data = await resp.json();
+    const product = data[currentProductIndex];
+    document.getElementById("title").innerText = product.title;
+    document.getElementById("img").src = product.image;
+    document.getElementById("price").innerText = product.price;
+    document.getElementById("description").innerText = product.description;
+
+    const rating = product.rating;
+
+})();
