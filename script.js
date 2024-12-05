@@ -48,4 +48,25 @@
     }
     jeweleryBtn.addEventListener("click", showJewelery);
 
+    const electronicsBtn = document.getElementById("electronics");
+
+    function showElectronics() {
+        document.getElementById("productCard").innerHTML = "";
+
+        for(let i = 0; i < data.length; i++) {
+            const product = data[i];
+            const category = product.category;
+            if(category.toLowerCase().includes("electronics")) {
+                const productElem = `
+                <div class="product">
+                    <img class="productImg" src=${product.image}>
+                    <p>${product.title}</p>
+                    <p>${product.price} $</p>
+                </div>`;
+                document.getElementById("productCard").innerHTML += productElem;
+            }
+        }
+    }
+    electronicsBtn.addEventListener("click", showElectronics);
+
 })();
