@@ -18,13 +18,22 @@
                     <img class="productImg" src=${product.image}>
                     <p>${product.title}</p>
                     <p>${product.price} $</p>
-                    <button>Buy me</button>
+                    <button class="buyBtn">Buy me</button>
                 </div>`;
                 document.getElementById("productCard").innerHTML += productElem;
             }
         }
+        const buyBtns = document.querySelectorAll(".buyBtn");
+        buyBtns.forEach(btn => {
+            btn.addEventListener("click", addToCart);
+        })
 
     }
+
+    function addToCart() {
+        console.log("Bought");
+    }
+
     clothesBtn.addEventListener("click", showClothes);
 
     const jeweleryBtn = document.getElementById("jewelery");
@@ -41,6 +50,7 @@
                     <img class="productImg" src=${product.image}>
                     <p>${product.title}</p>
                     <p>${product.price} $</p>
+                    <button>Buy me</button>
                 </div>`;
                 document.getElementById("productCard").innerHTML += productElem;
             }
@@ -62,6 +72,7 @@
                     <img class="productImg" src=${product.image}>
                     <p>${product.title}</p>
                     <p>${product.price} $</p>
+                    <button>Buy me</button>
                 </div>`;
                 document.getElementById("productCard").innerHTML += productElem;
             }
